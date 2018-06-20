@@ -1,0 +1,26 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class='nav flex-column'>
+            <li class="nav-item">
+                <a class="nav-link" [routerLinkActive]='["active"]' [routerLinkActiveOptions]='{ exact: true }' [routerLink]='["/"]' (click)='collapse()'>
+                    <i-home></i-home> Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLinkActive]='["active"]' [routerLink]='["/counter"]' (click)='collapse()'>
+                    <i-shopping-cart></i-shopping-cart> Counter
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLinkActive]='["active"]' [routerLink]='["/fetch-data"]' (click)='collapse()'>
+                    <i-layers></i-layers> Fetch data
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLinkActive]='["active"]' [routerLink]='["/scores"]' (click)='collapse()'>
+                    <i-refresh-cw></i-refresh-cw> Scores
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

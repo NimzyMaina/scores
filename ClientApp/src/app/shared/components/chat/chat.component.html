@@ -1,0 +1,43 @@
+<table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+          <th><span class="match-th">ID</span></th>
+          <th><span class="match-th">Match</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let match of matches">
+          <td><span class="teamName">{{match.id}}</span></td>
+          <td><span class="teamScore"> {{match.host}} vs {{match.guest}} </span></td>
+      </tr>
+      <tr>
+          <td colspan="2">
+              <span class="match-th" title="connection id">{{connection}}</span>
+          </td>
+      </tr>
+      <tr>
+          <td colspan="2">
+              <div class="chat-table">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th></th>
+                              <th>Message</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let message of messages" feedHighlight>
+                              <td>
+                                  <span class="feed-time">{{message.createdAt | date:'shortTime' }} [{{message.matchId}}]</span>
+                              </td>
+                              <td class="filterable-cell">
+                                  <span class="feed-update"> {{message.text}} </span>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </td>
+      </tr>
+  </tbody>
+</table>
